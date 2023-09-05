@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "The sum of WATER ($WATER) and STIR ($STIR) is: $((10#${WATER} + 10#${STIR})) in base BESTCHOL"
+awk -v water="$WATER" -v stir="$STIR" 'BEGIN {water_num = 0; stir_num = 0; split("ewatratewa", water_arr, ""); for (i = 1; i <= length(water); i++) water_num = water_num * length(water_arr) + index(water_arr, substr(water, i, 1)) - 1; split("ti.itirtrtr", stir_arr, ""); for (i = 1; i <= length(stir); i++) stir_num = stir_num * length(stir_arr) + index(stir_arr, substr(stir, i, 1)) - 1; sum = water_num + stir_num; result = ""; split("shtbeolhc", bestchol_arr, ""); while (sum > 0) {result = bestchol_arr[sum % length(bestchol_arr) + 1] result; sum = int(sum / length(bestchol_arr));} print result}'
